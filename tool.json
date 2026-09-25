@@ -1,0 +1,193 @@
+{
+  "tool": {
+    "id": "wells-tep",
+    "title": "Escore de Wells (embolia pulmonar)",
+    "short": "Probabilidade pré-teste de TEP",
+    "spec": [
+      "pneumologia",
+      "medicina-de-emergencia",
+      "cardiologia"
+    ],
+    "tier": 1,
+    "desc": "Calculadora do escore de Wells para embolia pulmonar: probabilidade pré-teste de TEP (dois e três níveis) e quando pedir D-dímero ou angiotomografia.",
+    "lead": "Estima a probabilidade clínica de tromboembolismo pulmonar e orienta entre D-dímero e angiotomografia.",
+    "fields": [
+      [
+        "tvp",
+        "Sinais clínicos de TVP",
+        "chk",
+        {
+          "pts": 3
+        }
+      ],
+      [
+        "alt",
+        "TEP é o diagnóstico mais provável",
+        "chk",
+        {
+          "pts": 3
+        }
+      ],
+      [
+        "fc",
+        "FC &gt; 100 bpm",
+        "chk",
+        {
+          "pts": 1.5
+        }
+      ],
+      [
+        "imob",
+        "Imobilização ≥ 3 dias ou cirurgia nas últimas 4 semanas",
+        "chk",
+        {
+          "pts": 1.5
+        }
+      ],
+      [
+        "prev",
+        "TVP ou TEP prévios",
+        "chk",
+        {
+          "pts": 1.5
+        }
+      ],
+      [
+        "hemo",
+        "Hemoptise",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "cancer",
+        "Câncer ativo (tratamento nos últimos 6 meses ou paliativo)",
+        "chk",
+        {
+          "pts": 1
+        }
+      ]
+    ],
+    "formula": "<p>Soma dos pontos: sinais de TVP 3 · TEP mais provável 3 · FC &gt; 100 1,5 · imobilização/cirurgia 1,5 · TVP/TEP prévio 1,5 · hemoptise 1 · câncer 1.</p>",
+    "table": [
+      [
+        "Pontos",
+        "Modelo de 2 níveis",
+        "Modelo de 3 níveis"
+      ],
+      [
+        "&lt; 2",
+        "TEP improvável (≤ 4)",
+        "Baixa (~1,3%)"
+      ],
+      [
+        "2 a 4",
+        "TEP improvável",
+        "Moderada (~16,2%)"
+      ],
+      [
+        "4,5 a 6",
+        "TEP provável (&gt; 4)",
+        "Moderada"
+      ],
+      [
+        "&gt; 6",
+        "TEP provável",
+        "Alta (~40,6%)"
+      ]
+    ],
+    "tips": [
+      "TEP improvável (≤ 4): peça D-dímero; se negativo (ou abaixo do corte ajustado para a idade após os 50 anos: idade × 10 ng/mL), o TEP está afastado.",
+      "TEP provável (&gt; 4): vá direto para a angiotomografia de tórax; não use D-dímero para excluir.",
+      "Em baixa probabilidade, os critérios PERC podem dispensar até o D-dímero.",
+      "Instabilidade hemodinâmica muda o fluxo: ecocardiograma à beira do leito e tratamento imediato."
+    ],
+    "sources": [
+      [
+        "Wells PS et al. Derivation of a simple clinical model to categorize patients probability of pulmonary embolism. Thromb Haemost, 2000.",
+        "https://doi.org/10.1055/s-0037-1613830"
+      ],
+      [
+        "Konstantinides SV et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J, 2020.",
+        "https://doi.org/10.1093/eurheartj/ehz405"
+      ]
+    ],
+    "cases": [
+      [
+        "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+        {
+          "tvp": true,
+          "fc": true
+        },
+        {
+          "raw": {
+            "score": 4.5
+          },
+          "verdict": "TEP provável"
+        }
+      ],
+      [
+        "Todos os critérios: 12,5 pontos (probabilidade alta)",
+        {
+          "tvp": true,
+          "alt": true,
+          "fc": true,
+          "imob": true,
+          "prev": true,
+          "hemo": true,
+          "cancer": true
+        },
+        {
+          "raw": {
+            "score": 12.5
+          },
+          "level": "high"
+        }
+      ],
+      [
+        "Nenhum critério: 0 ponto, TEP improvável",
+        [],
+        {
+          "raw": {
+            "score": 0
+          },
+          "level": "low",
+          "verdict": "improvável"
+        }
+      ]
+    ],
+    "batch": "cardiologia",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "cardiotoracica",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/cardiologia.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/cardiologia.php",
+    "sha256": "ed536451dd02922a7f840f2c9ce575be004cddb227f60426b7a52cf1b0e94ec0",
+    "bytes": 61303
+  },
+  "clinicalValidation": "not-performed"
+}

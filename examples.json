@@ -1,0 +1,61 @@
+[
+  {
+    "label": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+    "input": {
+      "tvp": true,
+      "fc": true
+    },
+    "expected": {
+      "raw": {
+        "score": 4.5
+      },
+      "verdict": "TEP provável"
+    },
+    "originalInput": {
+      "tvp": true,
+      "fc": true
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+    "input": {
+      "tvp": true,
+      "alt": true,
+      "fc": true,
+      "imob": true,
+      "prev": true,
+      "hemo": true,
+      "cancer": true
+    },
+    "expected": {
+      "raw": {
+        "score": 12.5
+      },
+      "level": "high"
+    },
+    "originalInput": {
+      "tvp": true,
+      "alt": true,
+      "fc": true,
+      "imob": true,
+      "prev": true,
+      "hemo": true,
+      "cancer": true
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Nenhum critério: 0 ponto, TEP improvável",
+    "input": {},
+    "expected": {
+      "raw": {
+        "score": 0
+      },
+      "level": "low",
+      "verdict": "improvável"
+    },
+    "originalInput": [],
+    "expandedZeroOptions": []
+  }
+]
