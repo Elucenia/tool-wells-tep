@@ -1,11 +1,11 @@
-/* tool-wells-tep · Elucenia · https://github.com/Elucenia/tool-wells-tep
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-wells-tep · ELUCENIA · https://github.com/Elucenia/tool-wells-tep
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"wells-tep","title":"Escore de Wells (embolia pulmonar)","fields":[["tvp","Sinais clínicos de TVP","chk",{"pts":3}],["alt","TEP é o diagnóstico mais provável","chk",{"pts":3}],["fc","FC &gt; 100 bpm","chk",{"pts":1.5}],["imob","Imobilização ≥ 3 dias ou cirurgia nas últimas 4 semanas","chk",{"pts":1.5}],["prev","TVP ou TEP prévios","chk",{"pts":1.5}],["hemo","Hemoptise","chk",{"pts":1}],["cancer","Câncer ativo (tratamento nos últimos 6 meses ou paliativo)","chk",{"pts":1}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
