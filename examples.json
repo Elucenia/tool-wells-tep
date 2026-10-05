@@ -1,9 +1,21 @@
 [
   {
-    "label": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
-    "input": {
+    "id": "wells-tep",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+    "originalInput": {
       "tvp": true,
       "fc": true
+    },
+    "input": {
+      "tvp": true,
+      "fc": true,
+      "alt": false,
+      "imob": false,
+      "prev": false,
+      "hemo": false,
+      "cancer": false
     },
     "expected": {
       "raw": {
@@ -11,14 +23,39 @@
       },
       "verdict": "TEP provável"
     },
-    "originalInput": {
-      "tvp": true,
-      "fc": true
+    "recordedResult": {
+      "main": [
+        "4,5",
+        "pontos"
+      ],
+      "label": "Escore de Wells",
+      "raw": {
+        "score": 4.5
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+    "id": "wells-tep",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+    "originalInput": {
+      "tvp": true,
+      "alt": true,
+      "fc": true,
+      "imob": true,
+      "prev": true,
+      "hemo": true,
+      "cancer": true
+    },
     "input": {
       "tvp": true,
       "alt": true,
@@ -34,20 +71,40 @@
       },
       "level": "high"
     },
-    "originalInput": {
-      "tvp": true,
-      "alt": true,
-      "fc": true,
-      "imob": true,
-      "prev": true,
-      "hemo": true,
-      "cancer": true
+    "recordedResult": {
+      "main": [
+        "12,5",
+        "pontos"
+      ],
+      "label": "Escore de Wells",
+      "raw": {
+        "score": 12.5
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Nenhum critério: 0 ponto, TEP improvável",
-    "input": {},
+    "id": "wells-tep",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Nenhum critério: 0 ponto, TEP improvável",
+    "originalInput": [],
+    "input": {
+      "tvp": false,
+      "alt": false,
+      "fc": false,
+      "imob": false,
+      "prev": false,
+      "hemo": false,
+      "cancer": false
+    },
     "expected": {
       "raw": {
         "score": 0
@@ -55,7 +112,23 @@
       "level": "low",
       "verdict": "improvável"
     },
-    "originalInput": [],
-    "expandedZeroOptions": []
+    "recordedResult": {
+      "main": [
+        "0,0",
+        "pontos"
+      ],
+      "label": "Escore de Wells",
+      "raw": {
+        "score": 0
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

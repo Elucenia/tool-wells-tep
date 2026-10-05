@@ -1,0 +1,157 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean tvp",
+    "input": {
+      "tvp": "2",
+      "fc": true,
+      "alt": false,
+      "imob": false,
+      "prev": false,
+      "hemo": false,
+      "cancer": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tvp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean alt",
+    "input": {
+      "tvp": true,
+      "fc": true,
+      "alt": "2",
+      "imob": false,
+      "prev": false,
+      "hemo": false,
+      "cancer": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "alt"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean fc",
+    "input": {
+      "tvp": true,
+      "fc": "2",
+      "alt": false,
+      "imob": false,
+      "prev": false,
+      "hemo": false,
+      "cancer": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "fc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean imob",
+    "input": {
+      "tvp": true,
+      "fc": true,
+      "alt": false,
+      "imob": "2",
+      "prev": false,
+      "hemo": false,
+      "cancer": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "imob"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean prev",
+    "input": {
+      "tvp": true,
+      "fc": true,
+      "alt": false,
+      "imob": false,
+      "prev": "2",
+      "hemo": false,
+      "cancer": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "prev"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean hemo",
+    "input": {
+      "tvp": true,
+      "fc": true,
+      "alt": false,
+      "imob": false,
+      "prev": false,
+      "hemo": "2",
+      "cancer": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "hemo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean cancer",
+    "input": {
+      "tvp": true,
+      "fc": true,
+      "alt": false,
+      "imob": false,
+      "prev": false,
+      "hemo": false,
+      "cancer": "2"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cancer"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

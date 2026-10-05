@@ -3,106 +3,59 @@
     "id": "wells-tep",
     "title": "Escore de Wells (embolia pulmonar)",
     "short": "Probabilidade pré-teste de TEP",
+    "desc": "Calculadora do escore de Wells para embolia pulmonar: probabilidade pré-teste de TEP (dois e três níveis) e quando pedir D-dímero ou angiotomografia.",
+    "lead": "Estima a probabilidade clínica de tromboembolismo pulmonar e orienta entre D-dímero e angiotomografia.",
+    "kind": "Calculadora",
     "spec": [
       "pneumologia",
       "medicina-de-emergencia",
       "cardiologia"
     ],
-    "tier": 1,
-    "desc": "Calculadora do escore de Wells para embolia pulmonar: probabilidade pré-teste de TEP (dois e três níveis) e quando pedir D-dímero ou angiotomografia.",
-    "lead": "Estima a probabilidade clínica de tromboembolismo pulmonar e orienta entre D-dímero e angiotomografia.",
     "fields": [
       [
         "tvp",
         "Sinais clínicos de TVP",
         "chk",
-        {
-          "pts": 3
-        }
+        {}
       ],
       [
         "alt",
         "TEP é o diagnóstico mais provável",
         "chk",
-        {
-          "pts": 3
-        }
+        {}
       ],
       [
         "fc",
         "FC &gt; 100 bpm",
         "chk",
-        {
-          "pts": 1.5
-        }
+        {}
       ],
       [
         "imob",
         "Imobilização ≥ 3 dias ou cirurgia nas últimas 4 semanas",
         "chk",
-        {
-          "pts": 1.5
-        }
+        {}
       ],
       [
         "prev",
         "TVP ou TEP prévios",
         "chk",
-        {
-          "pts": 1.5
-        }
+        {}
       ],
       [
         "hemo",
         "Hemoptise",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "cancer",
         "Câncer ativo (tratamento nos últimos 6 meses ou paliativo)",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ]
     ],
     "formula": "<p>Soma dos pontos: sinais de TVP 3 · TEP mais provável 3 · FC &gt; 100 1,5 · imobilização/cirurgia 1,5 · TVP/TEP prévio 1,5 · hemoptise 1 · câncer 1.</p>",
-    "table": [
-      [
-        "Pontos",
-        "Modelo de 2 níveis",
-        "Modelo de 3 níveis"
-      ],
-      [
-        "&lt; 2",
-        "TEP improvável (≤ 4)",
-        "Baixa (~1,3%)"
-      ],
-      [
-        "2 a 4",
-        "TEP improvável",
-        "Moderada (~16,2%)"
-      ],
-      [
-        "4,5 a 6",
-        "TEP provável (&gt; 4)",
-        "Moderada"
-      ],
-      [
-        "&gt; 6",
-        "TEP provável",
-        "Alta (~40,6%)"
-      ]
-    ],
-    "tips": [
-      "TEP improvável (≤ 4): peça D-dímero; se negativo (ou abaixo do corte ajustado para a idade após os 50 anos: idade × 10 ng/mL), o TEP está afastado.",
-      "TEP provável (&gt; 4): vá direto para a angiotomografia de tórax; não use D-dímero para excluir.",
-      "Em baixa probabilidade, os critérios PERC podem dispensar até o D-dímero.",
-      "Instabilidade hemodinâmica muda o fluxo: ecocardiograma à beira do leito e tratamento imediato."
-    ],
     "sources": [
       [
         "Wells PS et al. Derivation of a simple clinical model to categorize patients probability of pulmonary embolism. Thromb Haemost, 2000.",
@@ -157,9 +110,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -168,17 +118,496 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T19:23:48.285Z",
+      "total": 128,
+      "passed": 128,
+      "sourceRowCount": 128,
+      "uniqueApiInputCount": 128,
+      "sourceContextCount": 128,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "2262829d3ddd02dca32395e31aeb35e11da2c7a549c764b945231f0345660644",
+        "total": 128,
+        "bankRowCount": 128,
+        "uniqueApiInputCount": 128,
+        "sourceContextCount": 128,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/eight-diagnostic-independent-expectations-final26.json",
+            "sha256": "152a977a91b3f4279cac6a749638cae27a306f0bb072fa2400843da0db1e8268"
+          },
+          {
+            "file": "reports/review-20261003/eight-diagnostic-primary-source-review-final26.json",
+            "sha256": "8e4fe23dcd12fa323c509ec5432d30d841fe378f42ce1b05abc2724fa540481b"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/eight-diagnostic-independent-source-check-final26.json",
+          "sha256": "9925c0c432d78f268a3a5dd4d52cef5de566b192d5c3de6e7bbd6895eaf9d2b5"
+        },
+        "packagingRequirement": "Compose separately owned source/rubric/edition changes and fresh build/package/browser bindings before publication."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "sourceRows": 128,
+        "uniqueApiInputs": 128,
+        "duplicateRows": 0,
+        "expectationAudit": {
+          "file": "reports/review-20261003/eight-diagnostic-independent-expectations-final26.json",
+          "sha256": "152a977a91b3f4279cac6a749638cae27a306f0bb072fa2400843da0db1e8268"
+        }
+      },
+      "scope": "selected-point arithmetic only; only exact raw.score projected, no diagnosis/risk/rubric approval.",
+      "sources": [
+        {
+          "contributedPrimaryObservations": {
+            "file": "reports/review-20261003/eight-diagnostic-primary-source-review-final26.json",
+            "sha256": "8e4fe23dcd12fa323c509ec5432d30d841fe378f42ce1b05abc2724fa540481b"
+          },
+          "id": "wells-tep",
+          "edition": "Wells2000 ThrombHaemost83:416–420 PMID10744147; Wells2001 AnnInternMed135:98–107 DOI10.7326/0003-4819-135-2-200107170-00010",
+          "urls": [
+            "https://pubmed.ncbi.nlm.nih.gov/10744147/",
+            "https://sinaiem.org/wp-content/uploads/2016/11/Wells-Excluding-PE-at-the-bedside-without-diagnostic-imaging.pdf"
+          ],
+          "files": [
+            "wellspe2000-pubmed.xml",
+            "wellspe2001.pdf",
+            "wellspe2001-p2.png"
+          ],
+          "access": "Entire original2000 abstract read via official NCBI XML. Original2001 hospital-mirror PDF Methods/interventions printed99 visually read. Original2000 full paper not obtained.",
+          "population": "2001:930 consecutive adults with suspected PE at four Canadian tertiary EDs, symptom onset<30days and new/worsening dyspnea or chest pain. Study excludes pregnancy,<18,anticoagulants>24h,life expectancy<3months, inaccessible follow-up and other protocol conditions.",
+          "rules": {
+            "signsDVT": 3,
+            "PEAsOrMoreLikelyThanAlternative": 3,
+            "heartRateOver100": 1.5,
+            "bedrestAtLeast3ConsecutiveDaysOrSurgery4Weeks": 1.5,
+            "previousVTE": 1.5,
+            "hemoptysis": 1,
+            "cancer": 1
+          },
+          "findings": [
+            {
+              "area": "implicit alternative-diagnosis rubric",
+              "status": "wording fidelity issue",
+              "source": "2001 source assigns3 when PE is AS likely AS or more likely than alternative diagnosis; source notes it was not strictly defined.",
+              "current": "Current field says PE is the most likely diagnosis, potentially excluding ties. Weight only tested."
+            },
+            {
+              "area": "immobilization edition",
+              "status": "source distinction retained",
+              "source": "2001 original visually uses≥3consecutive days. Current NICE guidance says>3days.",
+              "current": "Current≥3 is supported by2001 original; do not label it a bug based on later guidance alone."
+            }
+          ],
+          "notVerified": [
+            "2000 full original rubric, subjective clinician assessment, diagnostic performance, management and all clinical category wording."
+          ],
+          "currentMethodVersion": "Wells PE 2000:7 fatores ponderados; classificação 2 níveis e 3 níveis separadas",
+          "currentToolSha256": "1e188caedd76538ffad52651598386f5d9f86a5bef91439990e56a4f701e92fd"
+        }
+      ],
+      "evidencePath": "reports/review-20261003/eight-diagnostic-independent-source-check-final26.json",
+      "evidenceSha256": "9925c0c432d78f268a3a5dd4d52cef5de566b192d5c3de6e7bbd6895eaf9d2b5",
+      "independentPeer": {
+        "status": "passed-scoped-numeric",
+        "evidence": {
+          "file": "reports/review-20261003/eight-diagnostic-numeric-independent-peer-verify-final27.json",
+          "sha256": "e7bddba5c7de286f91fa8c431512f512849302646394d88663afe8142e079a7d"
+        },
+        "scope": "Independent primary table/abstract reading, own selected-point expectations persisted before engines, exact numeric three-adapter Node/isolated Chromium. Clinical/risk/rubric/full-method conformance excluded; McIsaac final-clamp findings retained and excluded from this six-method projection."
+      },
+      "freshAdapterExecutions": 384,
+      "freshVmExecutions": 384,
+      "actualBrowserEvidenceScope": "Old actual Chromium receipt uses only website adapter; three adapters have independently completed Node/VM and new Verify Chromium peer. This bank explicitly names original website-only browser observations; no reassignment to other mirrors.",
+      "implementations": [
+        {
+          "id": "wells-tep",
+          "app": "website",
+          "file": "apps/website/private/tool-code/wells-tep/calculator.js",
+          "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+        },
+        {
+          "id": "wells-tep",
+          "app": "dashboard",
+          "file": "apps/dashboard/private/tool-code/wells-tep/calculator.js",
+          "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+        },
+        {
+          "id": "wells-tep",
+          "app": "command-center",
+          "file": "apps/command-center/private/tool-code/wells-tep/calculator.js",
+          "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+        }
+      ],
+      "qualifications": [
+        "2000 full original rubric, subjective clinician assessment, diagnostic performance, management and all clinical category wording.",
+        "Primary-source reading and access are recorded by the contributing source reviewer and independent numeric peer; this integration does not claim another full source reading.",
+        "Only raw.score selected-point arithmetic is included. Clinical categories, main text, private level/verdict/note/rows, prognosis, diagnosis, management and unmeasured feature classification are excluded.",
+        "All source scenarios in this bank and the original donor reports remain retained. Mirror/runtime calculations do not multiply scenario counts. Inline four examples are a subset of the complete downloadable bank.",
+        "Source fields, rubric/edition labels, clinical scope notes and localization changes have separate ownership and must be composed without replacing whole catalogs. All862 historic fixtures/tolerances and approval flags remain unchanged.",
+        "Fresh source/build/packages and browser journey bindings are required before publication. No already-served website or final package proof is claimed by this preparation."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "metadataPackagingPeer": {
+        "status": "passed",
+        "scope": "Bounded independent review of the original source bank and its metadata/helper. Prospective code rebinding is separately re-executed below and requires the final composition peer; no human approval inferred.",
+        "peer": {
+          "file": "reports/review-20261003/six-diagnostic-bank-metadata-independent-review-western-final27.json",
+          "sha256": "8f308a904c18e2d57f6d6b37c660021e399df5bd766589b89c9c03f2fa7d141c"
+        },
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "prospectiveSource27Bindings": [
+        {
+          "file": "apps/website/private/tool-code/wells-tep/calculator.js",
+          "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+        },
+        {
+          "file": "apps/dashboard/private/tool-code/wells-tep/calculator.js",
+          "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+        },
+        {
+          "file": "apps/command-center/private/tool-code/wells-tep/calculator.js",
+          "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+        }
+      ],
+      "prospectiveSource27Replay": {
+        "file": "reports/review-20261003/source27-complete-bank-current-replay-root-r3.json",
+        "sha256": "44c601f27d3d5051a8d55a581381112b58df36c7c4b6cfd24ce1249b263d6a2b"
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "Wells PE 2000:7 fatores ponderados; classificação 2 níveis e 3 níveis separadas",
+    "implementationVersion": "wells-tep@native-2026-10-03+733b7c0ce1ff",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/10744147/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Soma dos pontos: sinais de TVP 3 · TEP mais provável 3 · FC > 100 1,5 · imobilização/cirurgia 1,5 · TVP/TEP prévio 1,5 · hemoptise 1 · câncer 1.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "tvp",
+            "label": "Sinais clínicos de TVP",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "alt",
+            "label": "TEP é o diagnóstico mais provável",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "fc",
+            "label": "FC &gt; 100 bpm",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "imob",
+            "label": "Imobilização ≥ 3 dias ou cirurgia nas últimas 4 semanas",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "prev",
+            "label": "TVP ou TEP prévios",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "hemo",
+            "label": "Hemoptise",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "cancer",
+            "label": "Câncer ativo (tratamento nos últimos 6 meses ou paliativo)",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "53d15766d1aa2a26c3d16135a9c407fd6f8bf40cec42c85f6a1ba6303f2591f3"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Wells PS et al. Derivation of a simple clinical model to categorize patients probability of pulmonary embolism. Thromb Haemost, 2000.",
+          "url": "https://doi.org/10.1055/s-0037-1613830",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Derivation of a simple clinical model to categorize patients probability of pulmonary embolism: increasing the models utility with the SimpliRED D-dimer.",
+            "year": "2000",
+            "firstPublicationDate": "2000-03-01",
+            "doi": "10.1055/s-0037-1613830",
+            "pmid": "10744147",
+            "journal": "Thrombosis and haemostasis",
+            "authors": "Wells PS, Anderson DR, Rodger M, Ginsberg JS, Kearon C, Gent M, Turpie AG, Bormanis J, Weitz J, Chamberlain M, Bowie D, Barnes D, Hirsh J."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/10744147/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "a4e7dd53f8bdb4624b6a43677738a5fecedb9723085a08c28a7e6be9f49d02a2",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Konstantinides SV et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J, 2020.",
+          "url": "https://doi.org/10.1093/eurheartj/ehz405",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS).",
+            "year": "2020",
+            "firstPublicationDate": "2020-01-01",
+            "doi": "10.1093/eurheartj/ehz405",
+            "pmid": "31504429",
+            "journal": "European heart journal",
+            "authors": "Konstantinides SV, Meyer G, Becattini C, Bueno H, Geersing GJ, Harjola VP, Huisman MV, Humbert M, Jennings CS, Jiménez D, Kucher N, Lang IM, Lankeit M, Lorusso R, Mazzolai L, Meneveau N, Ní Áinle F, Prandoni P, Pruszczyk P, Righini M, Torbicki A, Van Belle E, Zamorano JL, ESC Scientific Document Group."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/31504429/",
+          "abstractAvailable": false,
+          "fullTextSha256": null,
+          "abstractSha256": null,
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T19:23:48.285Z",
+        "total": 128,
+        "passed": 128,
+        "sourceRowCount": 128,
+        "uniqueApiInputCount": 128,
+        "sourceContextCount": 128,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "2262829d3ddd02dca32395e31aeb35e11da2c7a549c764b945231f0345660644",
+          "total": 128,
+          "bankRowCount": 128,
+          "uniqueApiInputCount": 128,
+          "sourceContextCount": 128,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/eight-diagnostic-independent-expectations-final26.json",
+              "sha256": "152a977a91b3f4279cac6a749638cae27a306f0bb072fa2400843da0db1e8268"
+            },
+            {
+              "file": "reports/review-20261003/eight-diagnostic-primary-source-review-final26.json",
+              "sha256": "8e4fe23dcd12fa323c509ec5432d30d841fe378f42ce1b05abc2724fa540481b"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/eight-diagnostic-independent-source-check-final26.json",
+            "sha256": "9925c0c432d78f268a3a5dd4d52cef5de566b192d5c3de6e7bbd6895eaf9d2b5"
+          },
+          "packagingRequirement": "Compose separately owned source/rubric/edition changes and fresh build/package/browser bindings before publication."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "sourceRows": 128,
+          "uniqueApiInputs": 128,
+          "duplicateRows": 0,
+          "expectationAudit": {
+            "file": "reports/review-20261003/eight-diagnostic-independent-expectations-final26.json",
+            "sha256": "152a977a91b3f4279cac6a749638cae27a306f0bb072fa2400843da0db1e8268"
+          }
+        },
+        "scope": "selected-point arithmetic only; only exact raw.score projected, no diagnosis/risk/rubric approval.",
+        "sources": [
+          {
+            "contributedPrimaryObservations": {
+              "file": "reports/review-20261003/eight-diagnostic-primary-source-review-final26.json",
+              "sha256": "8e4fe23dcd12fa323c509ec5432d30d841fe378f42ce1b05abc2724fa540481b"
+            },
+            "id": "wells-tep",
+            "edition": "Wells2000 ThrombHaemost83:416–420 PMID10744147; Wells2001 AnnInternMed135:98–107 DOI10.7326/0003-4819-135-2-200107170-00010",
+            "urls": [
+              "https://pubmed.ncbi.nlm.nih.gov/10744147/",
+              "https://sinaiem.org/wp-content/uploads/2016/11/Wells-Excluding-PE-at-the-bedside-without-diagnostic-imaging.pdf"
+            ],
+            "files": [
+              "wellspe2000-pubmed.xml",
+              "wellspe2001.pdf",
+              "wellspe2001-p2.png"
+            ],
+            "access": "Entire original2000 abstract read via official NCBI XML. Original2001 hospital-mirror PDF Methods/interventions printed99 visually read. Original2000 full paper not obtained.",
+            "population": "2001:930 consecutive adults with suspected PE at four Canadian tertiary EDs, symptom onset<30days and new/worsening dyspnea or chest pain. Study excludes pregnancy,<18,anticoagulants>24h,life expectancy<3months, inaccessible follow-up and other protocol conditions.",
+            "rules": {
+              "signsDVT": 3,
+              "PEAsOrMoreLikelyThanAlternative": 3,
+              "heartRateOver100": 1.5,
+              "bedrestAtLeast3ConsecutiveDaysOrSurgery4Weeks": 1.5,
+              "previousVTE": 1.5,
+              "hemoptysis": 1,
+              "cancer": 1
+            },
+            "findings": [
+              {
+                "area": "implicit alternative-diagnosis rubric",
+                "status": "wording fidelity issue",
+                "source": "2001 source assigns3 when PE is AS likely AS or more likely than alternative diagnosis; source notes it was not strictly defined.",
+                "current": "Current field says PE is the most likely diagnosis, potentially excluding ties. Weight only tested."
+              },
+              {
+                "area": "immobilization edition",
+                "status": "source distinction retained",
+                "source": "2001 original visually uses≥3consecutive days. Current NICE guidance says>3days.",
+                "current": "Current≥3 is supported by2001 original; do not label it a bug based on later guidance alone."
+              }
+            ],
+            "notVerified": [
+              "2000 full original rubric, subjective clinician assessment, diagnostic performance, management and all clinical category wording."
+            ],
+            "currentMethodVersion": "Wells PE 2000:7 fatores ponderados; classificação 2 níveis e 3 níveis separadas",
+            "currentToolSha256": "1e188caedd76538ffad52651598386f5d9f86a5bef91439990e56a4f701e92fd"
+          }
+        ],
+        "evidencePath": "reports/review-20261003/eight-diagnostic-independent-source-check-final26.json",
+        "evidenceSha256": "9925c0c432d78f268a3a5dd4d52cef5de566b192d5c3de6e7bbd6895eaf9d2b5",
+        "independentPeer": {
+          "status": "passed-scoped-numeric",
+          "evidence": {
+            "file": "reports/review-20261003/eight-diagnostic-numeric-independent-peer-verify-final27.json",
+            "sha256": "e7bddba5c7de286f91fa8c431512f512849302646394d88663afe8142e079a7d"
+          },
+          "scope": "Independent primary table/abstract reading, own selected-point expectations persisted before engines, exact numeric three-adapter Node/isolated Chromium. Clinical/risk/rubric/full-method conformance excluded; McIsaac final-clamp findings retained and excluded from this six-method projection."
+        },
+        "freshAdapterExecutions": 384,
+        "freshVmExecutions": 384,
+        "actualBrowserEvidenceScope": "Old actual Chromium receipt uses only website adapter; three adapters have independently completed Node/VM and new Verify Chromium peer. This bank explicitly names original website-only browser observations; no reassignment to other mirrors.",
+        "implementations": [
+          {
+            "id": "wells-tep",
+            "app": "website",
+            "file": "apps/website/private/tool-code/wells-tep/calculator.js",
+            "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+          },
+          {
+            "id": "wells-tep",
+            "app": "dashboard",
+            "file": "apps/dashboard/private/tool-code/wells-tep/calculator.js",
+            "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+          },
+          {
+            "id": "wells-tep",
+            "app": "command-center",
+            "file": "apps/command-center/private/tool-code/wells-tep/calculator.js",
+            "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+          }
+        ],
+        "qualifications": [
+          "2000 full original rubric, subjective clinician assessment, diagnostic performance, management and all clinical category wording.",
+          "Primary-source reading and access are recorded by the contributing source reviewer and independent numeric peer; this integration does not claim another full source reading.",
+          "Only raw.score selected-point arithmetic is included. Clinical categories, main text, private level/verdict/note/rows, prognosis, diagnosis, management and unmeasured feature classification are excluded.",
+          "All source scenarios in this bank and the original donor reports remain retained. Mirror/runtime calculations do not multiply scenario counts. Inline four examples are a subset of the complete downloadable bank.",
+          "Source fields, rubric/edition labels, clinical scope notes and localization changes have separate ownership and must be composed without replacing whole catalogs. All862 historic fixtures/tolerances and approval flags remain unchanged.",
+          "Fresh source/build/packages and browser journey bindings are required before publication. No already-served website or final package proof is claimed by this preparation."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "metadataPackagingPeer": {
+          "status": "passed",
+          "scope": "Bounded independent review of the original source bank and its metadata/helper. Prospective code rebinding is separately re-executed below and requires the final composition peer; no human approval inferred.",
+          "peer": {
+            "file": "reports/review-20261003/six-diagnostic-bank-metadata-independent-review-western-final27.json",
+            "sha256": "8f308a904c18e2d57f6d6b37c660021e399df5bd766589b89c9c03f2fa7d141c"
+          },
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "prospectiveSource27Bindings": [
+          {
+            "file": "apps/website/private/tool-code/wells-tep/calculator.js",
+            "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+          },
+          {
+            "file": "apps/dashboard/private/tool-code/wells-tep/calculator.js",
+            "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+          },
+          {
+            "file": "apps/command-center/private/tool-code/wells-tep/calculator.js",
+            "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+          }
+        ],
+        "prospectiveSource27Replay": {
+          "file": "reports/review-20261003/source27-complete-bank-current-replay-root-r3.json",
+          "sha256": "44c601f27d3d5051a8d55a581381112b58df36c7c4b6cfd24ce1249b263d6a2b"
+        },
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+    },
+    "limits": "O Wells para embolia foi estudado em pessoas com suspeita clínica e dentro de uma estratégia que combinava escore com D-dímero. As classificações de dois e três níveis têm cortes distintos; escore baixo ou embolia improvável não são sinônimos de embolia ausente. Ensaios de D-dímero e critérios de aplicação devem corresponder ao protocolo diagnóstico utilizado.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.919Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo não fornece todas as exclusões ou equivalência de diferentes ensaios D-dímero. Mesmo associação negativa apresentou eventos em derivação/validação."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/wells-tep/calculator.js",
+    "bytes": 5181,
+    "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "4f6b0a46f1b8bbc73ec82c27b3514128c202cc1dc1fc3016824cb29678293794",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "c00ff8a51f9d732729eb6e8aecd00ea7c2b15c91ed432f4eb17ee05df4b1523e",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "c00ff8a51f9d732729eb6e8aecd00ea7c2b15c91ed432f4eb17ee05df4b1523e",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }
