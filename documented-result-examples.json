@@ -1,0 +1,807 @@
+{
+  "id": "wells-tep",
+  "implementationVersion": "wells-tep@native-2026-10-05+3ebb9879f067",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probabilidade (3 níveis)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "moderada (~16,2%)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "TEP provável: angiotomografia de tórax",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probabilidade (3 níveis)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "alta (~40,6%)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "TEP provável: angiotomografia de tórax",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Nenhum critério: 0 ponto, TEP improvável",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probabilidade (3 níveis)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "baixa (~1,3%)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "TEP improvável: dosar D-dímero",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probability (3 levels)",
+                "locale": "en",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "moderate (~16.2%)",
+                "locale": "en",
+                "template": "documented-authored-59f299444628281201e0"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Likely PE: chest CT angiography",
+            "locale": "en",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probability (3 levels)",
+                "locale": "en",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "high (~40.6%)",
+                "locale": "en",
+                "template": "documented-authored-15eb4e9b58afc5a5331f"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Likely PE: chest CT angiography",
+            "locale": "en",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Nenhum critério: 0 ponto, TEP improvável",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probability (3 levels)",
+                "locale": "en",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "low (~1.3%)",
+                "locale": "en",
+                "template": "documented-authored-78714702cac09f58f21e"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Unlikely PE: measure D-dimer",
+            "locale": "en",
+            "template": "documented-authored-f663ef14cd813ff461ca"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probabilidad (3 niveles)",
+                "locale": "es",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "moderada (~16,2%)",
+                "locale": "es",
+                "template": "documented-authored-59f299444628281201e0"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "TEP probable: angiotomografía de tórax",
+            "locale": "es",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probabilidad (3 niveles)",
+                "locale": "es",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "alta (~40,6%)",
+                "locale": "es",
+                "template": "documented-authored-15eb4e9b58afc5a5331f"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "TEP probable: angiotomografía de tórax",
+            "locale": "es",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Nenhum critério: 0 ponto, TEP improvável",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probabilidad (3 niveles)",
+                "locale": "es",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "baja (~1,3%)",
+                "locale": "es",
+                "template": "documented-authored-78714702cac09f58f21e"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "TEP improbable: dosar D-dímero",
+            "locale": "es",
+            "template": "documented-authored-f663ef14cd813ff461ca"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probabilité (3 niveaux)",
+                "locale": "fr",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "modérée (~16,2%)",
+                "locale": "fr",
+                "template": "documented-authored-59f299444628281201e0"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "EP probable : angio-TDM thoracique",
+            "locale": "fr",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probabilité (3 niveaux)",
+                "locale": "fr",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "élevée (~40,6%)",
+                "locale": "fr",
+                "template": "documented-authored-15eb4e9b58afc5a5331f"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "EP probable : angio-TDM thoracique",
+            "locale": "fr",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Nenhum critério: 0 ponto, TEP improvável",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probabilité (3 niveaux)",
+                "locale": "fr",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "faible (~1,3%)",
+                "locale": "fr",
+                "template": "documented-authored-78714702cac09f58f21e"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "EP improbable : doser le D-dimère",
+            "locale": "fr",
+            "template": "documented-authored-f663ef14cd813ff461ca"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Wahrscheinlichkeit (3 Stufen)",
+                "locale": "de",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "mittelgradig (~16,2%)",
+                "locale": "de",
+                "template": "documented-authored-59f299444628281201e0"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Wahrscheinliche LE: CT-Angiographie des Thorax",
+            "locale": "de",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Wahrscheinlichkeit (3 Stufen)",
+                "locale": "de",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "hoch (~40,6%)",
+                "locale": "de",
+                "template": "documented-authored-15eb4e9b58afc5a5331f"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Wahrscheinliche LE: CT-Angiographie des Thorax",
+            "locale": "de",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Nenhum critério: 0 ponto, TEP improvável",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Wahrscheinlichkeit (3 Stufen)",
+                "locale": "de",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "niedrig (~1,3%)",
+                "locale": "de",
+                "template": "documented-authored-78714702cac09f58f21e"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "LE unwahrscheinlich: D-Dimer bestimmen",
+            "locale": "de",
+            "template": "documented-authored-f663ef14cd813ff461ca"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probabilità (3 livelli)",
+                "locale": "it",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "moderata (~16,2%)",
+                "locale": "it",
+                "template": "documented-authored-59f299444628281201e0"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "EP probabile: angio-TC del torace",
+            "locale": "it",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probabilità (3 livelli)",
+                "locale": "it",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "alta (~40,6%)",
+                "locale": "it",
+                "template": "documented-authored-15eb4e9b58afc5a5331f"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "EP probabile: angio-TC del torace",
+            "locale": "it",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Nenhum critério: 0 ponto, TEP improvável",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Probabilità (3 livelli)",
+                "locale": "it",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "bassa (~1,3%)",
+                "locale": "it",
+                "template": "documented-authored-78714702cac09f58f21e"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "EP improbabile: dosare il D-dimero",
+            "locale": "it",
+            "template": "documented-authored-f663ef14cd813ff461ca"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "الاحتمال (3 مستويات)",
+                "locale": "ar",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "متوسطة (~16,2%)",
+                "locale": "ar",
+                "template": "documented-authored-59f299444628281201e0"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "الانصمام الرئوي مرجح: تصوير الأوعية المقطعي للصدر",
+            "locale": "ar",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "الاحتمال (3 مستويات)",
+                "locale": "ar",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "مرتفعة (~40,6%)",
+                "locale": "ar",
+                "template": "documented-authored-15eb4e9b58afc5a5331f"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "الانصمام الرئوي مرجح: تصوير الأوعية المقطعي للصدر",
+            "locale": "ar",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Nenhum critério: 0 ponto, TEP improvável",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "الاحتمال (3 مستويات)",
+                "locale": "ar",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "منخفضة (~1,3%)",
+                "locale": "ar",
+                "template": "documented-authored-78714702cac09f58f21e"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "الانصمام الرئوي غير مرجح: قياس D-dimero",
+            "locale": "ar",
+            "template": "documented-authored-f663ef14cd813ff461ca"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "概率（3 个级别）",
+                "locale": "zh",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "中等（~16.2%）",
+                "locale": "zh",
+                "template": "documented-authored-59f299444628281201e0"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "可能为肺栓塞：胸部 CT 血管造影",
+            "locale": "zh",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "概率（3 个级别）",
+                "locale": "zh",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "高（~40.6%）",
+                "locale": "zh",
+                "template": "documented-authored-15eb4e9b58afc5a5331f"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "可能为肺栓塞：胸部 CT 血管造影",
+            "locale": "zh",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Nenhum critério: 0 ponto, TEP improvável",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "概率（3 个级别）",
+                "locale": "zh",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "低（~1.3%）",
+                "locale": "zh",
+                "template": "documented-authored-78714702cac09f58f21e"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "不太可能为肺栓塞：检测 D-二聚体",
+            "locale": "zh",
+            "template": "documented-authored-f663ef14cd813ff461ca"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "確率（3段階）",
+                "locale": "ja",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "中等度（~16.2%）",
+                "locale": "ja",
+                "template": "documented-authored-59f299444628281201e0"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "肺塞栓症の可能性あり：胸部CT血管造影",
+            "locale": "ja",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "確率（3段階）",
+                "locale": "ja",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "高い（~40.6%）",
+                "locale": "ja",
+                "template": "documented-authored-15eb4e9b58afc5a5331f"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "肺塞栓症の可能性あり：胸部CT血管造影",
+            "locale": "ja",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Nenhum critério: 0 ponto, TEP improvável",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "確率（3段階）",
+                "locale": "ja",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "低い（~1.3%）",
+                "locale": "ja",
+                "template": "documented-authored-78714702cac09f58f21e"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "肺塞栓症は考えにくい：Dダイマーを測定",
+            "locale": "ja",
+            "template": "documented-authored-f663ef14cd813ff461ca"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "संभाव्यता (3 स्तर)",
+                "locale": "hi",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "मध्यम (~16.2%)",
+                "locale": "hi",
+                "template": "documented-authored-59f299444628281201e0"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "संभावित PE: छाती की CT एंजियोग्राफी",
+            "locale": "hi",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "संभाव्यता (3 स्तर)",
+                "locale": "hi",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "उच्च (~40.6%)",
+                "locale": "hi",
+                "template": "documented-authored-15eb4e9b58afc5a5331f"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "संभावित PE: छाती की CT एंजियोग्राफी",
+            "locale": "hi",
+            "template": "documented-authored-53b0f13f290701b0a06f"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Nenhum critério: 0 ponto, TEP improvável",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "संभाव्यता (3 स्तर)",
+                "locale": "hi",
+                "template": "documented-authored-dcc0838ddb2e2c56c8a7"
+              },
+              "value": {
+                "text": "कम (~1.3%)",
+                "locale": "hi",
+                "template": "documented-authored-78714702cac09f58f21e"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "PE असंभाव्य: D-dimer मापें",
+            "locale": "hi",
+            "template": "documented-authored-f663ef14cd813ff461ca"
+          },
+          "level": "low"
+        }
+      }
+    ]
+  }
+}

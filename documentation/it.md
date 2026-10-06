@@ -81,3 +81,34 @@ Risultato della formula o classificazione. Interpretazione, condotta e applicabi
 Apache-2.0 si applica solo al codice di ELUCENIA. I diritti su strumenti, pubblicazioni, traduzioni e dati restano ai rispettivi titolari. Conservi LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Risultati documentati
+
+Le informazioni seguenti conservano gli output del metodo per esempi sintetici. Non costituiscono una validazione clinica indipendente.
+
+### 1
+
+EP probabile: angio-TC del torace
+
+| Dettagli del risultato | |
+| --- | --- |
+| Probabilità (3 livelli) | moderata (~16,2%) |
+
+
+### 2
+
+EP probabile: angio-TC del torace
+
+| Dettagli del risultato | |
+| --- | --- |
+| Probabilità (3 livelli) | alta (~40,6%) |
+
+
+### 3
+
+EP improbabile: dosare il D-dimero
+
+| Dettagli del risultato | |
+| --- | --- |
+| Probabilità (3 livelli) | bassa (~1,3%) |
+

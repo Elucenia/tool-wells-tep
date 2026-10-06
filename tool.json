@@ -289,7 +289,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "Wells PE 2000:7 fatores ponderados; classificação 2 níveis e 3 níveis separadas",
-    "implementationVersion": "wells-tep@native-2026-10-03+733b7c0ce1ff",
+    "implementationVersion": "wells-tep@native-2026-10-05+3ebb9879f067",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/10744147/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -572,7 +572,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+      "implementationHash": "3ebb9879f067297d518e5ac1a467524bc3e79dd9b2b94f8ad899dce0de2ad345",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "wells-tep@native-2026-10-03+733b7c0ce1ff",
+          "previousImplementationHash": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd",
+          "implementationHash": "3ebb9879f067297d518e5ac1a467524bc3e79dd9b2b94f8ad899dce0de2ad345",
+          "scientificBodySha256": "df02f2c60f80a03a1a91f9988f4d5e0759f46f74c47932abedb4f0062b849a6f",
+          "metadataContractHash": "53d15766d1aa2a26c3d16135a9c407fd6f8bf40cec42c85f6a1ba6303f2591f3",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "O Wells para embolia foi estudado em pessoas com suspeita clínica e dentro de uma estratégia que combinava escore com D-dímero. As classificações de dois e três níveis têm cortes distintos; escore baixo ou embolia improvável não são sinônimos de embolia ausente. Ensaios de D-dímero e critérios de aplicação devem corresponder ao protocolo diagnóstico utilizado.",
     "sourceLimitEvidence": {
@@ -591,20 +619,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/wells-tep/calculator.js",
-    "bytes": 5181,
-    "sha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd"
+    "bytes": 5386,
+    "sha256": "3ebb9879f067297d518e5ac1a467524bc3e79dd9b2b94f8ad899dce0de2ad345"
   },
-  "sourceToolSha256": "4f6b0a46f1b8bbc73ec82c27b3514128c202cc1dc1fc3016824cb29678293794",
+  "sourceToolSha256": "f011ad3a60e53652092cb0f3bdad7ee5ee880e4f61992ef865b89f9596084285",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "c00ff8a51f9d732729eb6e8aecd00ea7c2b15c91ed432f4eb17ee05df4b1523e",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "c00ff8a51f9d732729eb6e8aecd00ea7c2b15c91ed432f4eb17ee05df4b1523e",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

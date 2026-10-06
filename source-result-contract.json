@@ -1,0 +1,203 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "wells-tep",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "e4416a13107f61f1ce5d624b137a07dc5a59b7ca",
+    "oldEngineSha256": "733b7c0ce1ff041ef234ab5425d65505d1a54b42e4a236e6251acadaa402ccfd",
+    "currentEngineSha256": "3ebb9879f067297d518e5ac1a467524bc3e79dd9b2b94f8ad899dce0de2ad345"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Sinais de TVP + FC > 100: 4,5 pontos: TEP provável (corte > 4)",
+      "input": {
+        "tvp": true,
+        "fc": true,
+        "alt": false,
+        "imob": false,
+        "prev": false,
+        "hemo": false,
+        "cancer": false
+      },
+      "publicOutput": {
+        "id": "wells-tep",
+        "main": [
+          "4,5",
+          "pontos"
+        ],
+        "label": "Escore de Wells",
+        "raw": {
+          "score": 4.5
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "score": 4.5
+        },
+        "verdict": "TEP provável"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "4,5",
+          "pontos"
+        ],
+        "label": "Escore de Wells",
+        "level": "mid",
+        "verdict": "TEP provável: angiotomografia de tórax",
+        "rows": [
+          [
+            "Probabilidade (3 níveis)",
+            "moderada (~16,2%)"
+          ]
+        ],
+        "raw": {
+          "score": 4.5
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Todos os critérios: 12,5 pontos (probabilidade alta)",
+      "input": {
+        "tvp": true,
+        "alt": true,
+        "fc": true,
+        "imob": true,
+        "prev": true,
+        "hemo": true,
+        "cancer": true
+      },
+      "publicOutput": {
+        "id": "wells-tep",
+        "main": [
+          "12,5",
+          "pontos"
+        ],
+        "label": "Escore de Wells",
+        "raw": {
+          "score": 12.5
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "score": 12.5
+        },
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "12,5",
+          "pontos"
+        ],
+        "label": "Escore de Wells",
+        "level": "high",
+        "verdict": "TEP provável: angiotomografia de tórax",
+        "rows": [
+          [
+            "Probabilidade (3 níveis)",
+            "alta (~40,6%)"
+          ]
+        ],
+        "raw": {
+          "score": 12.5
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Nenhum critério: 0 ponto, TEP improvável",
+      "input": {
+        "tvp": false,
+        "alt": false,
+        "fc": false,
+        "imob": false,
+        "prev": false,
+        "hemo": false,
+        "cancer": false
+      },
+      "publicOutput": {
+        "id": "wells-tep",
+        "main": [
+          "0,0",
+          "pontos"
+        ],
+        "label": "Escore de Wells",
+        "raw": {
+          "score": 0
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "score": 0
+        },
+        "level": "low",
+        "verdict": "improvável"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "0,0",
+          "pontos"
+        ],
+        "label": "Escore de Wells",
+        "level": "low",
+        "verdict": "TEP improvável: dosar D-dímero",
+        "rows": [
+          [
+            "Probabilidade (3 níveis)",
+            "baixa (~1,3%)"
+          ]
+        ],
+        "raw": {
+          "score": 0
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    }
+  ]
+}
